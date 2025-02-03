@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Translation</title>
+</head>
+<body>
+    <h1>Machine Translation</h1>
+    <form action="/translate" method="post">
+        <label for="input_sentence">Enter a sentence:</label>
+        <input type="text" id="input_sentence" name="input_sentence" required>
+        <button type="submit">Translate</button>
+    </form>
+    {% if input_sentence %}
+        <h2>Input Sentence:</h2>
+        <p>{{ input_sentence }}</p>
+    {% endif %}
+    {% if translated_sentence %}
+        <h2>Translated Sentence:</h2>
+        <p>{{ translated_sentence }}</p>
+    {% endif %}
+</body>
+</html>
